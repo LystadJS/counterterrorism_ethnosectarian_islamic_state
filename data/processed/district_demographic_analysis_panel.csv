@@ -1,0 +1,28 @@
+fid_dist_t,objectid,adm3name,adm3code,adm2name,adm2code,total_pop,new_id,prop_kurd,prop_sunni,prop_shia,hawth_id,sunni_pop,kurd_pop,shia_pop,district_id,district_name,governorate,district_join_key,governorate_join_key,population,raw_sunni,raw_shia,raw_kurdish,sunni_share,shia_share,kurdish_share,known_share,other_share,dominant_share,demographic_type,demographic_family,fractionalization,border_status,border_demographic_type
+0,0,Al Sadr,NA,Baghdad,iq01,797629,2,0,0,1,1,0,0,797629,0,0,Unknown governorate,0,unknown governorate,797629,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
+0,0,Al Sadr,NA,Baghdad,iq01,114751,3,0,0.5,0.5,2,57375.5,0,57375.5,0,0,Unknown governorate,0,unknown governorate,114751,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+0,0,Al Sadr,NA,Baghdad,iq01,374645,4,0,0.5,0.5,3,187322.5,0,187322.5,0,0,Unknown governorate,0,unknown governorate,374645,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+0,0,Al Sadr,NA,Baghdad,iq01,185465,6,0,0.5,0.5,5,92732.5,0,92732.5,0,0,Unknown governorate,0,unknown governorate,185465,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+1,0,Khadamiya,iq01008,Baghdad,iq01,161305,8,0,1,0,6,161305,0,0,1,1,Unknown governorate,1,unknown governorate,161305,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+1,0,Khadamiya,iq01008,Baghdad,iq01,47564,9,0,0.5,0.5,7,23782,0,23782,1,1,Unknown governorate,1,unknown governorate,47564,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+1,0,Khadamiya,iq01008,Baghdad,iq01,228308,10,0,0,1,8,0,0,228308,1,1,Unknown governorate,1,unknown governorate,228308,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
+1,0,Khadamiya,iq01008,Baghdad,iq01,90093,12,0,0,1,9,0,0,90093,1,1,Unknown governorate,1,unknown governorate,90093,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
+2,0,Al Resafa,iq01004,Baghdad,iq01,85769,15,0,0.5,0.5,10,42884.5,0,42884.5,2,2,Unknown governorate,2,unknown governorate,85769,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+2,0,Al Resafa,iq01004,Baghdad,iq01,3514,20,0,1,0,11,3514,0,0,2,2,Unknown governorate,2,unknown governorate,3514,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+2,0,Al Resafa,iq01004,Baghdad,iq01,657089,21,0,0.5,0.5,12,328544.5,0,328544.5,2,2,Unknown governorate,2,unknown governorate,657089,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+2,0,Al Resafa,iq01004,Baghdad,iq01,304737,22,0,0.5,0.5,13,152368.5,0,152368.5,2,2,Unknown governorate,2,unknown governorate,304737,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+3,0,Adhamiya,iq01003,Baghdad,iq01,354298,23,0,0.5,0.5,14,177149,0,177149,3,3,Unknown governorate,3,unknown governorate,354298,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+3,0,Adhamiya,iq01003,Baghdad,iq01,54559,24,0,0,1,15,0,0,54559,3,3,Unknown governorate,3,unknown governorate,54559,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
+3,0,Adhamiya,iq01003,Baghdad,iq01,391007,25,0,0.5,0.5,16,195503.5,0,195503.5,3,3,Unknown governorate,3,unknown governorate,391007,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+3,0,Adhamiya,iq01003,Baghdad,iq01,58637,26,0,1,0,17,58637,0,0,3,3,Unknown governorate,3,unknown governorate,58637,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,249690,28,0,0.5,0.5,18,124845,0,124845,4,4,Unknown governorate,4,unknown governorate,249690,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,46467,29,0,1,0,19,46467,0,0,4,4,Unknown governorate,4,unknown governorate,46467,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,100666,30,0,0.5,0.5,20,50333,0,50333,4,4,Unknown governorate,4,unknown governorate,100666,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,367699,31,0,0.5,0.5,21,183849.5,0,183849.5,4,4,Unknown governorate,4,unknown governorate,367699,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,196900,32,0,0.5,0.5,22,98450,0,98450,4,4,Unknown governorate,4,unknown governorate,196900,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,91324,33,0,0.5,0.5,23,45662,0,45662,4,4,Unknown governorate,4,unknown governorate,91324,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,108837,34,0,0.5,0.5,24,54418.5,0,54418.5,4,4,Unknown governorate,4,unknown governorate,108837,0.5,0.5,0,0.5,0.5,0,1,0,0.5,Sunni-majority,Sunni,0.5,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,112830,35,0,1,0,25,112830,0,0,4,4,Unknown governorate,4,unknown governorate,112830,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,47729,37,0,0,1,26,0,0,47729,4,4,Unknown governorate,4,unknown governorate,47729,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
+4,0,Karkh,iq01005,Baghdad,iq01,37419,38,0,1,0,27,37419,0,0,4,4,Unknown governorate,4,unknown governorate,37419,1,0,0,1,0,0,1,0,1,Sunni-majority,Sunni,0,Border districts,Border Sunni
+4,0,Karkh,iq01005,Baghdad,iq01,88239,39,0,0,1,28,0,0,88239,4,4,Unknown governorate,4,unknown governorate,88239,0,1,0,0,1,0,1,0,1,Shia-majority,Shia,0,Border districts,Border Shia
