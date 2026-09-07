@@ -1,0 +1,9 @@
+column_name,column_position,column_class,missing_count,missing_rate,unique_count
+district_id,1,character,0,0,103
+district_name,2,character,0,0,104
+governorate,3,character,0,0,18
+governorate_id,4,character,0,0,17
+district_area_km2,5,numeric,0,0,104
+district_area_km2_geometry,6,numeric,0,0,104
+population_total,7,numeric,0,0,104
+district_label,8,character,0,0,104
