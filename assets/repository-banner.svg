@@ -1,35 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="260" viewBox="0 0 1600 260" role="img" aria-labelledby="title desc">
-  <title id="title">Counterterrorism and Ethnosectarian Context — Islamic State Attack Patterns in Iraq</title>
-  <desc id="desc">Minimal repository banner using the LystadJS website palette in a restrained GitHub-native card layout.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+  <title id="title">Counterterrorism, Ethnosectarian Context and Islamic State Attack Patterns</title>
+  <desc id="desc">Dark academic research banner with oxblood and violet accents, analytical workflow motifs, and repository status.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#0d0b10"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070709"/>
+      <stop offset="0.58" stop-color="#0d0b10"/>
       <stop offset="1" stop-color="#120e15"/>
     </linearGradient>
+    <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#65457e" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#65457e" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="crimsonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8d1732" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#8d1732" stop-opacity="0"/>
+    </radialGradient>
     <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#65457e"/>
       <stop offset="0.5" stop-color="#9270ac"/>
-      <stop offset="1" stop-color="#8d1732"/>
+      <stop offset="1" stop-color="#bf3152"/>
     </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M44 0H0V44" fill="none" stroke="#eee5d9" stroke-opacity="0.026" stroke-width="1"/>
+    </pattern>
   </defs>
-  <rect width="1600" height="260" rx="12" fill="url(#bg)"/>
-  <rect x="0.5" y="0.5" width="1599" height="259" rx="11.5" fill="none" stroke="#312632"/>
-  <g transform="translate(64 46)">
-    <rect x="2" y="2" width="24" height="24" transform="rotate(45 14 14)" fill="#0c090d" stroke="#59434f"/>
-    <text x="14" y="18" text-anchor="middle" fill="#aaa0a6" font-family="Georgia, 'Times New Roman', serif" font-size="9" font-weight="700">J</text>
-    <text x="44" y="19" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" font-weight="600" letter-spacing="1.2">LYSTADJS / RESEARCH</text>
+
+  <rect width="1600" height="420" fill="url(#bg)"/>
+  <rect width="1600" height="420" fill="url(#grid)"/>
+  <ellipse cx="1430" cy="85" rx="430" ry="310" fill="url(#violetGlow)"/>
+  <ellipse cx="160" cy="415" rx="470" ry="300" fill="url(#crimsonGlow)"/>
+
+  <g transform="translate(72 140)">
+    <rect x="0" y="0" width="92" height="92" transform="rotate(45 46 46)" fill="#0c090d" stroke="#8d1732" stroke-width="2"/>
+    <rect x="12" y="12" width="68" height="68" transform="rotate(45 46 46)" fill="none" stroke="#eee5d9" stroke-opacity="0.15"/>
+    <circle cx="46" cy="46" r="31" fill="url(#crimsonGlow)" opacity="0.95"/>
+    <text x="46" y="56" text-anchor="middle" fill="#c8bcc7" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" letter-spacing="2">JSL</text>
   </g>
-  <g transform="translate(64 112)">
-    <text x="0" y="0" fill="#eee5d9" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="43" font-weight="700" letter-spacing="-0.8">Counterterrorism &amp; Ethnosectarian Context</text>
-    <text x="0" y="43" fill="#c8bcc7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="500">Islamic State attack patterns in Iraq</text>
-    <rect x="0" y="68" width="310" height="2" rx="1" fill="url(#accent)" opacity="0.9"/>
+
+  <g transform="translate(214 66)">
+    <text x="0" y="0" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="600" letter-spacing="3">ACTIVE RESEARCH WORKSPACE / PRELIMINARY</text>
+    <text x="0" y="63" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="47" font-weight="700">Counterterrorism &amp;</text>
+    <text x="0" y="113" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="47" font-weight="700">Ethnosectarian Context</text>
+    <text x="0" y="157" fill="#c8bcc7" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="600">Islamic State Attack Patterns in Iraq</text>
+    <rect x="0" y="179" width="700" height="3" fill="url(#accent)"/>
+    <text x="0" y="219" fill="#c8bcc7" font-family="Inter, Arial, sans-serif" font-size="19">Event data · spatial joins · population weighting · panel construction · modeling</text>
+    <text x="0" y="258" fill="#91a8bb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">GTD → IRAQ DISTRICTS → ETHNOSECTARIAN COMPOSITION → LANDSCAN → ANALYSIS</text>
+    <text x="0" y="297" fill="#918493" font-family="Inter, Arial, sans-serif" font-size="15">Auditability, reproducibility, and explicit uncertainty over polished claims.</text>
   </g>
-  <g transform="translate(64 213)" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">
-    <text x="0" y="0">R</text><circle cx="26" cy="-4" r="2" fill="#4a3547"/>
-    <text x="40" y="0">GTD</text><circle cx="76" cy="-4" r="2" fill="#4a3547"/>
-    <text x="90" y="0">sf</text><circle cx="110" cy="-4" r="2" fill="#4a3547"/>
-    <text x="124" y="0">LandScan</text><circle cx="192" cy="-4" r="2" fill="#4a3547"/>
-    <text x="206" y="0">district-month panels</text><circle cx="356" cy="-4" r="2" fill="#4a3547"/>
-    <text x="370" y="0">preliminary research</text>
+
+  <g opacity="0.72">
+    <rect x="1110" y="58" width="390" height="304" fill="#120e15" fill-opacity="0.64" stroke="#312632"/>
+    <path d="M1140 118h330M1140 172h330M1140 226h330M1140 280h330" stroke="#4a3547" stroke-opacity="0.42"/>
   </g>
+
+  <g transform="translate(1140 81)">
+    <text x="0" y="0" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">REPOSITORY SIGNAL</text>
+    <text x="0" y="58" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[DATA]</text>
+    <text x="90" y="58" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">GTD · ESOC · LandScan</text>
+    <text x="0" y="112" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[METHOD]</text>
+    <text x="90" y="112" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">R · sf · panel workflows</text>
+    <text x="0" y="166" fill="#bf3152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[STATUS]</text>
+    <text x="90" y="166" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">results not frozen</text>
+    <text x="0" y="220" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[PRIORITY]</text>
+    <text x="90" y="220" fill="#c8bcc7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">reproducible decisions</text>
+  </g>
+
+  <rect x="0" y="417" width="1600" height="3" fill="url(#accent)" opacity="0.86"/>
 </svg>
