@@ -1,0 +1,34 @@
+# R session / IDE state
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# OS/editor artifacts
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Raw / restricted / local research data
+# Keep only the README that documents acquisition and expected paths.
+data/raw/*
+!data/raw/README.md
+data/private/
+data/local/
+
+# Temporary outputs
+outputs/tmp/
+outputs/cache/
+logs/*.log
+
+# Local environment caches
+renv/library/
+renv/staging/
+renv/python/
+
+# Secrets / environment variables
+.env
+.env.*
+!.env.example

@@ -1,94 +1,158 @@
-<div align="center">
+<p align="center">
+  <img src="assets/repository-banner.svg" alt="Counterterrorism, Ethnosectarian Context & Islamic State Attack Patterns" width="100%">
+</p>
 
-# Counterterrorism, Ethnosectarian Context & Islamic State Attack Patterns
+<p align="center">
+  <a href="https://lystadjs.github.io/"><strong>Portfolio</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://lystadjs.github.io/research.html"><strong>Research</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://lystadjs.github.io/code.html"><strong>Code & Development</strong></a>
+  &nbsp;·&nbsp;
+  <a href="CITATION.cff"><strong>Citation</strong></a>
+  &nbsp;·&nbsp;
+  <a href="REPRODUCIBILITY.md"><strong>Reproducibility</strong></a>
+</p>
 
-**R workflows for event-data cleaning, spatial-demographic integration, panel construction, diagnostics, and visualization**
+> **Status:** Active research workspace · **Primary language:** R · **Results:** Preliminary / not a frozen publication release
 
-[Portfolio](https://lystadjs.github.io/) · [Research](https://lystadjs.github.io/research.html) · [Code & Development](https://lystadjs.github.io/code.html) · [GitHub Profile](https://github.com/LystadJS)
+This repository contains reproducible analytical workflows for studying **Islamic State-linked attack patterns in Iraq alongside district-level ethnosectarian context**. It integrates event data, spatial boundaries, ethnicity information, population weighting, diagnostic checks, model objects, and publication-oriented visualizations.
 
-</div>
+The repository is intentionally transparent about uncertainty and development state. **Code, figures, and derived artifacts should not be interpreted as final empirical claims unless they are tied to a tagged release or an accompanying publication.**
 
----
+## Research questions
 
-**Repository status:** `ACTIVE RESEARCH WORKSPACE` · methods and file organization are still evolving
+The current analytical program is organized around questions such as:
 
-## Overview
+- How are Islamic State-linked attacks distributed across Iraqi districts with different ethnosectarian compositions?
+- How do attack frequency and targeting composition vary across demographic contexts and conflict phases?
+- How sensitive are substantive patterns to spatial joins, population weighting, event classification, and missing-data decisions?
 
-This repository contains analytical workflows for studying terrorism and Islamic State-linked attack patterns alongside local ethnosectarian context in Iraq. The codebase combines event-level terrorism data, district boundaries, ethnicity information, and population weighting to produce analysis-ready geographic and temporal structures.
+## Representative output
 
-The repository should be treated as a **research workspace rather than a finalized publication artifact**. It contains both modularized workflows and retained working/legacy scripts. No empirical result in this repository should be treated as a final claim unless it is separately documented as such.
+<p align="center">
+  <img src="figures/population_weighted_heatmap.svg" alt="Population-weighted heatmap relating district demographic composition to attack frequency" width="92%">
+</p>
 
-## Analytical scope
+The figure above is included as a **representative analytical output**, not as a standalone final result. Interpretation depends on the underlying sample construction, spatial joins, population weighting, and event-classification decisions documented in the code and supporting files.
 
-The current codebase includes workflows that:
+## Analytical workflow
 
-1. ingest and clean Global Terrorism Database (GTD) event records;
-2. identify formal Islamic State affiliates and candidate incidents using group labels and narrative information;
-3. transform Iraqi district and ethnicity spatial data;
-4. combine ethnicity fragments with LandScan population information to estimate district-level population-weighted ethnic composition;
-5. calculate district-level composition measures, including ethnic-group shares and fractionalization;
-6. construct district-month analytical panels; and
-7. generate diagnostic and publication-oriented visualizations relating attack patterns to demographic context.
+```text
+external source data
+        ↓
+raw-file indexing + import
+        ↓
+schema / duplicate / missingness audit
+        ↓
+controlled cleaning and type conversion
+        ↓
+GTD event classification + Iraqi spatial transformation
+        ↓
+LandScan population-weighted ethnosectarian composition
+        ↓
+spatial/event joins + district-month analytical panels
+        ↓
+models + diagnostics + publication-oriented figures
+```
 
-## Repository map
+The project deliberately exposes dictionaries, diagnostics, intermediate objects, and legacy work where they help reconstruct analytical decisions.
 
-| Path | Role |
+## Repository structure
+
+| Path | Purpose |
 |---|---|
-| `scripts/` | Modular import, cleaning, validation, transformation, and helper scripts |
-| `03) Heatmap - Ethnicity Population Proportion vs Attack Frequency by Month.R` | Population-weighted district-month panel and heatmap workflow |
-| `04) Targetting Composition Plot.R` | Target-composition visualization workflow |
-| `GTD Cleaning.R` | GTD ingestion and Islamic State identification/filtering logic |
-| `GTD Manipulation.R` | Event-data cleaning, typing, transformation, and derived variables |
-| `Iraq Ethnicity Cleaning.R` | ESOC/LandScan district-level ethnicity transformation |
+| `analysis/` | Canonical high-level analytical entry points |
+| `scripts/` | Modular import, validation, cleaning, transformation, and helper functions |
 | `data/dictionary/` | Data schemas and variable dictionaries |
-| `data/intermediate/` | Intermediate analytical objects |
-| `data/miscellaneous/` | Supporting documentation, including GTD reference material |
+| `data/intermediate/` | Intermediate analytical objects retained for auditability |
+| `data/processed/` | Derived analytical datasets currently tracked in the project |
+| `data/review/` | Review-oriented derived files used during event classification |
+| `data/raw/` | Local source-data location; source data are intentionally not committed by this refactor |
+| `figures/` | Canonical analytical figures |
+| `models/` | Saved model objects |
+| `logs/` | Reproducibility and file-index logs |
+| `archive/legacy/` | Earlier root-level scripts and duplicate outputs preserved without presenting them as canonical |
+| `assets/` | Repository presentation assets |
 
-Several top-level `Untitled-*.R` and other working scripts are retained for provenance and experimentation. They should not be assumed to be canonical entry points.
+See [`PROVENANCE.md`](PROVENANCE.md) for the exact structural mapping from the pre-refactor repository.
+
+## Canonical entry points
+
+### 1. Project setup
+
+```r
+source("scripts/00) Project Setup.R")
+```
+
+This checks the core package set, creates expected project directories, defines common missing-value tokens, and sets the project seed to `1501211`.
+
+### 2. General data-initialization pipeline
+
+```r
+source("scripts/25) Data Initialization Pipeline.R")
+```
+
+This ties together the modular import, audit, missingness, schema, and export scripts. It is a general initialization pipeline and should be reviewed against the specific source files being used before execution.
+
+### 3. Population-weighted district-month analysis
+
+```r
+source("analysis/01_population_weighted_heatmap.R")
+```
+
+This workflow validates required GTD, Iraqi spatial/ethnicity, and LandScan inputs; builds quality-control products; constructs a population-weighted district-level ethnicity table; and produces district-month analytical outputs and figures.
+
+### 4. Targeting-composition dashboard
+
+```r
+source("analysis/02_targeting_composition_dashboard.R")
+```
+
+This script is **not currently standalone**. It expects upstream observed-composition and model-prediction objects to exist in the active R session. That dependency is kept explicit rather than hidden; see [`analysis/README.md`](analysis/README.md).
+
+## Data provenance and redistribution
+
+The workflows reference external sources including:
+
+- **Global Terrorism Database (GTD)** event data;
+- Iraqi district and ethnicity spatial materials associated with **ESOC** resources; and
+- **LandScan 2008** population data.
+
+External datasets may have separate licenses, EULAs, citation requirements, or redistribution restrictions. Public visibility of this repository does **not** relicense third-party data. See [`DATA.md`](DATA.md) and [`RIGHTS.md`](RIGHTS.md) before redistributing any source or derived material.
 
 ## Reproducibility
 
-The analytical code is written primarily in **R** and uses tidyverse-style pipelines. Spatial work uses `sf`; individual workflows may require additional spatial/data packages depending on the entry point.
+The repository contains extensive data-quality and provenance machinery, but this development branch does **not fabricate an `renv.lock` from an unknown environment**. A lockfile should be generated from a known-good environment after the canonical workflow is verified end-to-end.
 
-A typical reproducibility path is:
+Current reproducibility controls include:
 
-```text
-raw source data
-    ↓
-import + validation
-    ↓
-clean event and spatial data
-    ↓
-population-weighted demographic transformation
-    ↓
-spatial/event joins
-    ↓
-district-month analytical panel
-    ↓
-diagnostics + figures
-```
+- deterministic project seed (`1501211`);
+- explicit source-file validation in the population-weighted workflow;
+- raw-file indexing;
+- schema inventories and data dictionaries;
+- duplicate, missingness, and spatial diagnostics;
+- saved intermediate/model objects; and
+- retained legacy scripts for provenance.
 
-The heatmap workflow explicitly validates expected source files, creates reproducibility indexes, exports data dictionaries, and performs data-quality checks before downstream analysis.
-
-## Data provenance and use
-
-The code references external data sources including:
-
-- **Global Terrorism Database (GTD)** event data;
-- Iraqi district and ethnicity spatial data associated with **ESOC** materials; and
-- **LandScan 2008** population raster data.
-
-These source datasets may be governed by their own licenses, EULAs, citation requirements, or redistribution restrictions. Review the original source terms and the supporting documentation in this repository before redistributing source data or derived products.
-
-## Research integrity
-
-This repository emphasizes auditability over polished appearance. Intermediate files, validation outputs, dictionaries, and working scripts are intentionally visible where useful for reconstructing analytical decisions.
-
-Current limitations include an evolving directory structure and the coexistence of refactored and legacy scripts. Future cleanup should preserve provenance while consolidating canonical entry points.
+See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for environment and execution guidance.
 
 ## Citation
 
-If code from this repository materially contributes to published work, cite the specific repository version or commit used and separately cite the underlying source datasets according to their respective requirements.
+A [`CITATION.cff`](CITATION.cff) file is included so GitHub can surface repository citation metadata. When this work materially contributes to research, cite the **specific repository version or commit** used and separately cite the underlying datasets according to their source requirements.
+
+## Rights and reuse
+
+No blanket open-source license is asserted by this refactor. Repository code, written material, figures, derived data, and third-party source materials can have different rights requirements. [`RIGHTS.md`](RIGHTS.md) documents the current conservative position until a deliberate licensing decision is made.
+
+## Research integrity
+
+This repository is organized around four principles:
+
+1. **Auditability** — intermediate decisions should be reconstructable.
+2. **Reproducibility** — execution requirements and data dependencies should be explicit.
+3. **Separation of canonical and legacy work** — historical scripts are retained without being presented as current entry points.
+4. **No result inflation** — exploratory or evolving outputs are not described as settled findings.
 
 ---
 

@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this research repository, please cite the specific repository version or commit and separately cite the underlying data sources."
+title: "Counterterrorism, Ethnosectarian Context & Islamic State Attack Patterns"
+type: software
+authors:
+  - family-names: "Lystad"
+    given-names: "John S."
+repository-code: "https://github.com/LystadJS/counterterrorism_ethnosectarian_islamic_state"
+url: "https://github.com/LystadJS/counterterrorism_ethnosectarian_islamic_state"
+abstract: >-
+  R-based research workflows integrating terrorism event data with Iraqi
+  district-level spatial, ethnosectarian, and population information for
+  reproducible analysis of Islamic State-linked attack patterns. The
+  repository is an active research workspace and should not be treated as a
+  frozen publication release unless tied to a tagged version or publication.
+keywords:
+  - counterterrorism
+  - terrorism
+  - Islamic State
+  - Iraq
+  - computational social science
+  - spatial analysis
+  - reproducible research

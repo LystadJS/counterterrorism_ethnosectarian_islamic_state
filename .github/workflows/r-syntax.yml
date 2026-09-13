@@ -1,0 +1,53 @@
+name: R syntax check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  parse-r:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Parse canonical and modular R scripts
+        shell: Rscript {0}
+        run: |
+          files <- c(
+            list.files("analysis", pattern = "\\.R$", full.names = TRUE, recursive = TRUE),
+            list.files("scripts", pattern = "\\.R$", full.names = TRUE, recursive = TRUE)
+          )
+
+          if (length(files) == 0L) {
+            stop("No R files found in analysis/ or scripts/.")
+          }
+
+          failed <- vapply(
+            files,
+            function(path) {
+              tryCatch(
+                {
+                  parse(file = path)
+                  message("OK: ", path)
+                  FALSE
+                },
+                error = function(e) {
+                  message("PARSE ERROR: ", path, "\n", conditionMessage(e))
+                  TRUE
+                }
+              )
+            },
+            FUN.VALUE = logical(1)
+          )
+
+          if (any(failed)) {
+            stop("One or more publication-facing R files failed to parse.")
+          }
