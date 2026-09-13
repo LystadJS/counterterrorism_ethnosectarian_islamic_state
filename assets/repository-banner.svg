@@ -23,53 +23,44 @@
     <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
       <path d="M44 0H0V44" fill="none" stroke="#eee5d9" stroke-opacity="0.026" stroke-width="1"/>
     </pattern>
-    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
-      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000000" flood-opacity="0.46"/>
-    </filter>
   </defs>
 
   <rect width="1600" height="420" fill="url(#bg)"/>
   <rect width="1600" height="420" fill="url(#grid)"/>
   <ellipse cx="1430" cy="85" rx="430" ry="310" fill="url(#violetGlow)"/>
-  <ellipse cx="150" cy="410" rx="470" ry="300" fill="url(#crimsonGlow)"/>
+  <ellipse cx="160" cy="415" rx="470" ry="300" fill="url(#crimsonGlow)"/>
 
-  <g opacity="0.64">
-    <path d="M1090 58h390v304h-390z" fill="#120e15" fill-opacity="0.58" stroke="#312632"/>
-    <path d="M1124 118h305" stroke="#4a3547" stroke-opacity="0.65"/>
-    <path d="M1124 172h305" stroke="#4a3547" stroke-opacity="0.42"/>
-    <path d="M1124 226h305" stroke="#4a3547" stroke-opacity="0.42"/>
-    <path d="M1124 280h305" stroke="#4a3547" stroke-opacity="0.42"/>
+  <g transform="translate(72 140)">
+    <rect x="0" y="0" width="92" height="92" transform="rotate(45 46 46)" fill="#0c090d" stroke="#8d1732" stroke-width="2"/>
+    <rect x="12" y="12" width="68" height="68" transform="rotate(45 46 46)" fill="none" stroke="#eee5d9" stroke-opacity="0.15"/>
+    <circle cx="46" cy="46" r="31" fill="url(#crimsonGlow)" opacity="0.95"/>
+    <text x="46" y="56" text-anchor="middle" fill="#c8bcc7" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" letter-spacing="2">JSL</text>
   </g>
 
-  <g transform="translate(92 105)" filter="url(#shadow)">
-    <rect x="0" y="0" width="104" height="104" transform="rotate(45 52 52)" fill="#0c090d" stroke="#59434f" stroke-width="2"/>
-    <rect x="14" y="14" width="76" height="76" transform="rotate(45 52 52)" fill="none" stroke="#eee5d9" stroke-opacity="0.08"/>
-    <circle cx="52" cy="52" r="35" fill="url(#crimsonGlow)" opacity="0.72"/>
-    <text x="52" y="62" text-anchor="middle" fill="#aaa0a6" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="700" letter-spacing="2">JSL</text>
-  </g>
-
-  <g transform="translate(245 73)">
+  <g transform="translate(214 66)">
     <text x="0" y="0" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="600" letter-spacing="3">ACTIVE RESEARCH WORKSPACE / PRELIMINARY</text>
-    <text x="0" y="66" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="51" font-weight="700">Counterterrorism &amp; Ethnosectarian Context</text>
-    <text x="0" y="121" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="44" font-weight="600">Islamic State Attack Patterns in Iraq</text>
-    <rect x="0" y="146" width="690" height="3" fill="url(#accent)"/>
-    <text x="0" y="193" fill="#c8bcc7" font-family="Inter, Arial, sans-serif" font-size="21">Event data · spatial joins · population weighting · panel construction · modeling</text>
-    <text x="0" y="235" fill="#91a8bb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14">GTD  →  IRAQ DISTRICTS  →  ETHNOSECTARIAN COMPOSITION  →  LANDSCAN  →  ANALYSIS</text>
-    <text x="0" y="279" fill="#918493" font-family="Inter, Arial, sans-serif" font-size="16">Auditability, reproducibility, and explicit uncertainty over polished claims.</text>
+    <text x="0" y="63" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="47" font-weight="700">Counterterrorism &amp;</text>
+    <text x="0" y="113" fill="#eee5d9" font-family="Georgia, 'Times New Roman', serif" font-size="47" font-weight="700">Ethnosectarian Context</text>
+    <text x="0" y="157" fill="#c8bcc7" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="600">Islamic State Attack Patterns in Iraq</text>
+    <rect x="0" y="179" width="700" height="3" fill="url(#accent)"/>
+    <text x="0" y="219" fill="#c8bcc7" font-family="Inter, Arial, sans-serif" font-size="19">Event data · spatial joins · population weighting · panel construction · modeling</text>
+    <text x="0" y="258" fill="#91a8bb" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">GTD → IRAQ DISTRICTS → ETHNOSECTARIAN COMPOSITION → LANDSCAN → ANALYSIS</text>
+    <text x="0" y="297" fill="#918493" font-family="Inter, Arial, sans-serif" font-size="15">Auditability, reproducibility, and explicit uncertainty over polished claims.</text>
   </g>
 
-  <g transform="translate(1118 82)">
-    <text x="0" y="0" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">REPOSITORY SIGNAL</text>
+  <g opacity="0.72">
+    <rect x="1110" y="58" width="390" height="304" fill="#120e15" fill-opacity="0.64" stroke="#312632"/>
+    <path d="M1140 118h330M1140 172h330M1140 226h330M1140 280h330" stroke="#4a3547" stroke-opacity="0.42"/>
+  </g>
 
+  <g transform="translate(1140 81)">
+    <text x="0" y="0" fill="#918493" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" letter-spacing="1.8">REPOSITORY SIGNAL</text>
     <text x="0" y="58" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[DATA]</text>
     <text x="90" y="58" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">GTD · ESOC · LandScan</text>
-
     <text x="0" y="112" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[METHOD]</text>
     <text x="90" y="112" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">R · sf · panel workflows</text>
-
     <text x="0" y="166" fill="#bf3152" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[STATUS]</text>
     <text x="90" y="166" fill="#eee5d9" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">results not frozen</text>
-
     <text x="0" y="220" fill="#9270ac" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" font-weight="700">[PRIORITY]</text>
     <text x="90" y="220" fill="#c8bcc7" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">reproducible decisions</text>
   </g>
