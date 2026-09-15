@@ -1,0 +1,41 @@
+schema_version: "1.0"
+project:
+  id: islamic-state-ethnosectarian-attack-patterns
+  title: "Counterterrorism, Ethnosectarian Context and Islamic State Attack Patterns"
+  short_title: "Islamic State Attack Patterns"
+  repository: "LystadJS/counterterrorism_ethnosectarian_islamic_state"
+  type: academic-research
+  status: active
+  featured: true
+  summary: "Reproducible analysis of Islamic State-linked attack patterns in Iraq using terrorism-event data, district-level ethnosectarian composition, spatial boundaries, population weighting, diagnostics, and statistical modeling."
+methods:
+  - id: spatial-statistics
+    role: primary
+    techniques: [spatial-analysis, population-weighted-geography, spatial-visualization]
+    usage: "Links attack events to Iraqi district geography and population-weighted ethnosectarian composition, with spatial validation and visualization."
+  - id: missing-data
+    role: secondary
+    techniques: [missingness-diagnostics]
+    usage: "Uses explicit missingness audits and diagnostic workflows as part of reproducible event-data preparation and interpretation."
+  - id: statistical-computing
+    role: secondary
+    techniques: [statistical-modeling, data-visualization, reproducible-computing]
+    usage: "Uses modular R workflows, saved analytical objects, diagnostics, and publication-oriented figures to make analytical decisions reproducible."
+domains: [political-violence, terrorism-counterterrorism, human-security]
+contexts: [academic-research, open-source-intelligence]
+geography:
+  scope: country-specific
+  countries: [IQ]
+  map_countries: [IQ]
+  note: "The current repository is centered on district-level empirical analysis in Iraq."
+software: [R]
+keywords: [islamic-state, terrorism, ethnosectarian-context, iraq, event-data, reproducible-research]
+outputs:
+  - type: portfolio
+    label: "Academic research portfolio entry"
+    url: "https://lystadjs.github.io/research.html#paper-target-map"
+access:
+  repository_visibility: public
+  data_access: mixed
+  code_access: full
+  disclosure: "Public code and derived artifacts are available, while third-party source data remain subject to their original licensing, EULA, citation, and redistribution constraints."
